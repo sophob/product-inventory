@@ -1,0 +1,22 @@
+{
+  "name": "product-inventory",
+  "version": "0.0.1",
+  "description": "Products Inventory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Eliphaz Bouye",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.0.1",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "prisma": "^5.22.0"
+  }
+}

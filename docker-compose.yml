@@ -1,0 +1,25 @@
+services:
+  database:
+    image: postgres:16.4
+    restart: always
+    environment:
+      - POSTGRES_USER=phaz
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=shopdb
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - "5439:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: phaz@admin.com
+      PGADMIN_DEFAULT_PASSWORD: secret
+      PGADMIN_CONFIG_CONSOLE_LOG_LEVEL: 10
+    ports:
+      - "8069:80"
+
+volumes:
+  postgres:
